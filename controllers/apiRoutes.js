@@ -1,23 +1,53 @@
 const express = require("express");
 const routes = express.Router();
+const Application = require("../models/Application");
 
-routes.get("/employee", (req, res) => {
+routes.get("/application", (req, res) => {
   res.send("hello");
 });
 
-routes.get("/employee/:id", (req, res) => {
+routes.get("/application/:id", (req, res) => {
   res.send("hello");
 });
 
-routes.post("/employee", (req, res) => {
+routes.post("/application", async (req, res) => {
+  const {
+    firstName,
+    lastName,
+    street,
+    city,
+    state,
+    zip,
+    phone,
+    email,
+    gender,
+    dob,
+    qualification,
+    education,
+  } = req.body;
+  const application = new Application({
+    firstName,
+    lastName,
+    street,
+    city,
+    state,
+    zip,
+    phone,
+    email,
+    gender,
+    dob,
+    qualification,
+    education,
+  });
+  await application.save();
+  res.send(application);
+});
+
+routes.put("/application/:id", (req, res) => {
   res.send("hello");
 });
 
-routes.put("/employee/:id", (req, res) => {
-  res.send("hello");
-});
-
-routes.delete("/employee/:id", (req, res) => {
+routes.delete("/application/:id", (req, res) => {
   res.send("hello");
 });
 

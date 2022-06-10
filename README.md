@@ -15,8 +15,8 @@
 
 ## wireframes
 
-![wireframe 1](/image/IMG_5373.jpg)
-![wireframe 2](/image/IMG_5374.jpg)
+![wireframe 1](/public/IMG_5373.jpg)
+![wireframe 2](/public/IMG_5374.jpg)
 
 ## Models
 
