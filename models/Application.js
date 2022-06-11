@@ -7,7 +7,7 @@ const application = mongoose.Schema({
   city: { type: String, require: true },
   state: { type: String, require: true },
   zip: { type: Number, require: true },
-  phone: { type: Number, require: true },
+  phone: { type: String, require: true },
   email: { type: String, require: true },
   gender: { type: String, require: true },
   dob: { type: Number, require: true },

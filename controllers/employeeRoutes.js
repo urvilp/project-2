@@ -9,4 +9,8 @@ routes.get("/form", (req, res) => {
   res.render("form");
 });
 
+routes.get("/confirm", (req, res) => {
+  res.render("confirm");
+});
+
 module.exports = routes;

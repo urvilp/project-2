@@ -10,19 +10,39 @@
     <h1>Application for job</h1>
     <br />
     <br />
-    <form action="">
+    <form action="/api/application" method="post">
       <input type="text" placeholder="first name" name="firstName" />
       <input type="text" placeholder="last name" name="lastName" /> <br /><br />
-      <input type="text" placeholder="street" name=" street" /><br /><br />
-      <input type="text" placeholder="city" name="city" />
-      <input type="text" placeholder="state" name="state" />
-      <input type="text" placeholder="Zip" name="zip" /><br /><br />
-      <input type="text" placeholder="ph" name="phone" />
-      <input type="text" placeholder="Email" name="email" /><br /><br />
-      <input type="text" placeholder="Gender" name="gender" />
-      <input type="text" placeholder="DoB" name="dob" /><br /><br />
-      <input type="text" placeholder="qualification" name="qualification" />
-      <input type="text" placeholder="Education" name="Education" /><br /><br />
+      <input
+        required
+        type="text"
+        placeholder="street"
+        name=" street"
+      /><br /><br />
+      <input required type="text" placeholder="city" name="city" />
+      <input required type="text" placeholder="state" name="state" />
+      <input required type="number" placeholder="Zip" name="zip" /><br /><br />
+      <input required type="text" placeholder="ph" name="phone" />
+      <input
+        required
+        type="email"
+        placeholder="Email"
+        name="email"
+      /><br /><br />
+      <input required type="text" placeholder="Gender" name="gender" />
+      <input required type="number" placeholder="DoB" name="dob" /><br /><br />
+      <input
+        required
+        type="text"
+        placeholder="qualification"
+        name="qualification"
+      />
+      <input
+        required
+        type="text"
+        placeholder="Education"
+        name="Education"
+      /><br /><br />
       <input type="submit" />
     </form>
   </body>
