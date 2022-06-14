@@ -7,61 +7,106 @@
     <title>Application for job</title>
   </head>
   <body>
-    <h1>Application for job</h1>
+    <nav>
+      <h2>💎 United Diamond Inc</h2>
+      <h1>Application for job</h1>
+    </nav>
+    <br />
     <br />
     <br />
     <form action="/api/application" method="post">
-      <input type="text" placeholder="first name" name="firstName" />
-      <input type="text" placeholder="last name" name="lastName" /> <br /><br />
-      <input
-        required
-        type="text"
-        placeholder="street"
-        name=" street"
-      /><br /><br />
-      <input required type="text" placeholder="city" name="city" />
-      <input required type="text" placeholder="state" name="state" />
-      <input required type="number" placeholder="Zip" name="zip" /><br /><br />
-      <input required type="text" placeholder="ph" name="phone" />
-      <input
-        required
-        type="email"
-        placeholder="Email"
-        name="email"
-      /><br /><br />
-      <input required type="text" placeholder="Gender" name="gender" />
-      <input required type="number" placeholder="DoB" name="dob" /><br /><br />
-      <input
-        required
-        type="text"
-        placeholder="qualification"
-        name="qualification"
-      />
-      <input
-        required
-        type="text"
-        placeholder="Education"
-        name="Education"
-      /><br /><br />
-      <input type="submit" />
+      <div id="name">
+        <input type="text" placeholder="first name" name="firstName" />
+        <input type="text" placeholder="last name" name="lastName" />
+      </div>
+      <br /><br />
+
+      <div id="street">
+        <input required type="text" placeholder="street" name="street" />
+      </div>
+      <br /><br />
+
+      <div id="city">
+        <input required type="text" placeholder="city" name="city" />
+        <input required type="text" placeholder="state" name="state" />
+        <input required type="number" placeholder="Zip" name="zip" />
+      </div>
+      <br /><br />
+
+      <div id="phone">
+        <input required type="text" placeholder="ph" name="phone" />
+        <input required type="email" placeholder="Email" name="email" />
+      </div>
+      <br /><br />
+
+      <div id="dob">
+        <input required type="text" placeholder="Gender" name="gender" />
+        <input required type="number" placeholder="DoB" name="dob" />
+      </div>
+      <br /><br />
+
+      <div id="education">
+        <input
+          required
+          type="text"
+          placeholder="qualification"
+          name="qualification"
+        />
+        <input required type="text" placeholder="Education" name="education" />
+      </div>
+      <br /><br />
+      <button id="button">Submit</button>
     </form>
   </body>
 </html>
 
 <style>
+  nav {
+    display: flex;
+    margin: -8px;
+    padding: 13px;
+    background-color: greenyellow;
+  }
+  input {
+    width: 45%;
+    height: 30px;
+  }
+  #street {
+    width: 205%;
+  }
+  #city {
+    width: 93.5%;
+    display: flex;
+  }
   body {
     text-align: center;
+    background-color: bisque;
+  }
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    color: blue;
   }
 
   h1 {
-    color: white;
-    background-color: greenyellow;
-    margin: 0;
+    color: rgb(230, 12, 12);
+    margin-left: 25%;
+    font-size: 33px;
+    font-family: cursive;
   }
 
   form {
     text-align: left;
     margin: 0 auto;
     width: 50%;
+  }
+  #button {
+    width: 10%;
+    height: 40px;
+    font-size: medium;
+    background-color: rgb(68, 88, 202);
+    border-radius: 10px;
+    color: white;
+    margin-left: 40%;
   }
 </style>

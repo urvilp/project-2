@@ -9,9 +9,18 @@
   <body>
     <nav>
       <h1>💎United Diamond inc</h1>
-      <h1>hello {user name}!</h1>
-      <a href="/employer/details">details</a>
+      <h1>hello Employer!</h1>
     </nav>
+    <div>
+      <% for (let i = 0; i < applications.length; i++) { %>
+      <div>
+        <h4>
+          <%= applications[i].firstName %> <%= applications[i].lastName %>
+        </h4>
+        <a href="/employer/details/<%= applications[i]._id %>">View</a>
+      </div>
+      <% } %>
+    </div>
   </body>
   <style>
     body {

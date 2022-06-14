@@ -1,22 +1,6 @@
-const { application } = require("express");
 const express = require("express");
 const routes = express.Router();
 const Application = require("../models/Application");
-
-routes.get("/application", async (req, res) => {
-  const application = await Application.find();
-  res.send(application);
-});
-
-routes.get("/application/:id", async (req, res) => {
-  try {
-    const application = await Application.findOne({ _id: req.params.id });
-    res.send(application);
-  } catch {
-    res.status(404);
-    res.send({ error: "post doesn't exist!" });
-  }
-});
 
 routes.post("/application", async (req, res) => {
   const {
@@ -115,7 +99,7 @@ routes.put("/application/:id", async (req, res) => {
 routes.delete("/application/:id", async (req, res) => {
   try {
     await Application.deleteOne({ _id: req.params.id });
-    res.status(204).send();
+    res.redirect("/employer");
   } catch {
     res.status(404);
     res.send({ error: "post doesn't exist!" });

@@ -1,13 +1,15 @@
 const express = require("express");
+const mongoose = require("mongoose");
+const methodOverride = require("method-override");
+const apiRoutes = require("./controllers/apiRoutes");
 const employeeRoutes = require("./controllers/employeeRoutes");
 const employerRoutes = require("./controllers/employerRoutes");
-const apiRoutes = require("./controllers/apiRoutes");
-const mongoose = require("mongoose");
 const db = mongoose.connection;
 const app = express();
 const port = 5000;
 
 require("dotenv").config();
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));
