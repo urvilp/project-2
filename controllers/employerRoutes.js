@@ -17,4 +17,14 @@ routes.get("/details/:id", async (req, res) => {
   }
 });
 
+routes.get("/edit/:id", async (req, res) => {
+  try {
+    const application = await Application.findOne({ _id: req.params.id });
+    res.render("edit", { application: application });
+  } catch {
+    res.status(404);
+    res.send({ error: "post doesn't exist!" });
+  }
+});
+
 module.exports = routes;

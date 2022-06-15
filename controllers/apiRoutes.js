@@ -89,7 +89,7 @@ routes.put("/application/:id", async (req, res) => {
       application.education = education;
     }
     await application.save();
-    res.send(application);
+    res.redirect(`/employer/details/${req.params.id}`);
   } catch {
     res.status(404);
     res.send({ error: "Post doesn't exist" });

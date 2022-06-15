@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>employer</title>
+  </head>
+  <body>
+    <h2>💎 United Diamond Inc</h2>
+
+    <div>
+        <h1><%= application.firstName %> Profile</h1>
+        <form action=<%=`/api/application/${application._id}?_method=PUT`%> method="POST">
+            <b>First Name:</b> <input required type="text" name="firstName" value="<%= application.firstName %>" /><br><br>
+            <b>Last Name:</b> <input required type="text" name="lastName" value="<%= application.lastName %>" /><br><br>
+            <b>Street:</b> <input required type="text" name="street" value="<%= application.street %>" /><br><br>
+            <b>City:</b> <input required type="text" name="city" value="<%= application.city %>" /><br><br>
+            <b>State:</b> <input required type="text" name="state" value="<%= application.state %>" /><br><br>
+            <b>Zip:</b> <input required type="number" name="zip" value="<%= application.zip %>" /><br><br>
+            <b>Phone:</b> <input required type="text" name="phone" value="<%= application.phone %>" /><br><br>
+            <b>Email:</b> <input required type="email" name="email" value="<%= application.email %>" /><br><br>
+            <b>Gender:</b> <input required type="text" name="gender" value="<%= application.gender %>" /><br><br>
+            <b>Date of Birth:</b> <input required type="text" name="dob" value="<%= application.dob %>" /><br><br>
+            <b>Qualification:</b> <input required type="text" name="qualification" value="<%= application.qualification %>" /><br><br>
+            <b>Education:</b> <input required type="text" name="education" value="<%= application.education %>" />
+            <br /><br />
+            <button id="Edit">Update</button>
+        </form>
+    </div>
+
+    <nav id="button">
+      <button id="Back"><a href=<%=`/employer/details/${application._id}`%>>Back</a></button>
+    </nav>
+
+    <style>
+      body{
+        background: linear-gradient(yellow, blue )
+      }
+      h1{
+        text-align: center;
+      }
+      h2{
+        color: blue
+      }
+      div{
+        border: 4px solid rgb(225, 9, 60);
+        border-radius: 10px;
+        height: 600px;
+        width: 500px;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: wheat
+        
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      #Delete, #Edit, #Back{
+        /* margin-left: 45%; */
+        width: 10%;
+        height: 40px;
+        font-size: medium;
+        background-color: rgb(68, 88, 202);
+        border-radius: 10px;
+        color: white;
+      }
+      #button{
+        display: inline;
+        margin-left: 40%;
+      }
+    </style>
+</html>

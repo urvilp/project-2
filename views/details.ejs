@@ -10,7 +10,7 @@
     <h2>💎 United Diamond Inc</h2>
 
     <div>
-    <h1>Urvil Profile</h1>
+    <h1><%= application.firstName %> Profile</h1>
     <p><b>First Name:</b> <%= application.firstName %></p>
     <p><b>Last Name:</b> <%= application.lastName %></p>
     <p><b>Street:</b> <%= application.street %></p>
@@ -29,7 +29,7 @@
 
     <nav id="button">
       <button id="Back"><a href="/employer">Back</a></button>.
-      <button id="Edit">Edit</button>
+      <button id="Edit"><a href=<%=`/employer/edit/${application._id}`%>>Edit</a></button>
       <form action=<%=`/api/application/${application._id}?_method=DELETE`%> method="POST">
         <button id="Delete">Delete</button>
       </form>
@@ -39,7 +39,7 @@
       body{
         background: linear-gradient(yellow, blue )
       }
-      h1{
+      h1 {
         text-align: center;
       }
       h2{
