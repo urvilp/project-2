@@ -6,7 +6,7 @@ const employeeRoutes = require("./controllers/employeeRoutes");
 const employerRoutes = require("./controllers/employerRoutes");
 const db = mongoose.connection;
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 require("dotenv").config();
 app.use(methodOverride("_method"));
