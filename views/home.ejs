@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
-    <h1>💎 United Diamond Inc</h1>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="" class="brand-logo left">💎 United Diamond Inc</a>
+          <ul class="right">
+            <li>
+              <% if (user) { %>
+              <a href="/logout"
+                ><i class="material-icons left">trending_flat</i>Log Out</a
+              >
+              <% } else { %>
+              <a href="/auth/google"
+                ><i class="material-icons left">vpn_key</i>Login with Google</a
+              >
+              <% } %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <p>
       Are you an <a href="/employee">employee</a> or an
       <a href="/employer">employer</a>?
@@ -20,17 +48,25 @@
     background-image: url("diamond6.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 790px;
   }
   p {
     font-size: 243%;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 40%;
+    color: whitesmoke;
   }
   h1 {
-    background-color: bisque;
-    margin: -8px;
-    padding: 9px;
     color: blue;
+  }
+  /* nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: bisque;
+    margin: -9px;
+  } */
+  #register {
+    margin-left: 272px;
   }
 </style>
