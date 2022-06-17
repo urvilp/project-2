@@ -1,7 +1,6 @@
 const User = require("../models/User");
 
 function index(req, res, next) {
-  console.log(req.query);
   let modelQuery = req.query.name
     ? { name: new RegExp(req.query.name, "i") }
     : {};

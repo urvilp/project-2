@@ -13,11 +13,13 @@
     </nav>
     <div>
       <% for (let i = 0; i < applications.length; i++) { %>
-      <div>
+      <div class="application-box">
         <h4>
           <%= applications[i].firstName %> <%= applications[i].lastName %>
         </h4>
-        <a href="/employer/details/<%= applications[i]._id %>">View</a>
+        <a href="/employer/details/<%= applications[i]._id %>"
+          ><button>View</button></a
+        >
       </div>
       <% } %>
     </div>
@@ -26,6 +28,16 @@
     body {
       background-color: blanchedalmond;
       text-align: center;
+    }
+    .application-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid black;
+      margin: 2%;
+    }
+    .application-box:hover {
+      background-color: burlywood;
     }
   </style>
 </html>
